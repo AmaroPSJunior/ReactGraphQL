@@ -8,9 +8,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={apolloClient}>
-        <div className="App">
-          <TodoList />
-        </div>
+        <TodoList />
       </ApolloProvider>
     );
   }

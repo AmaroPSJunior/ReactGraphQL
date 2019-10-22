@@ -15,9 +15,9 @@ const TodosQuery = gql`
 class TodoList extends Component {
     renderTodosList = () => (
         <ul>
-            { this.props.todos.allTodoes.map(todo => (
+            { this.props.todos.allTodoes.map(todo => 
                 <li key={todo.id}>{todo.text}</li>
-            ))}
+            )}
         </ul>
     );
 
@@ -26,7 +26,7 @@ class TodoList extends Component {
 
         return(
             <>
-                { todos.loading
+                { this.props.loading
                     ? <p>Carregando...</p>
                     : this.renderTodosList()
                 }
